@@ -28,10 +28,10 @@ ul {
 	--clr-primary-Softblue: hsl(215, 51%, 70%);
 	--clr-primary-Cyan: hsl(178, 100%, 50%);
 
-	--clr-neutral-VeryDarkBlue: hsl(217, 54%, 11%);
-	--clr-neutral-VeryDarkBlue: hsl(216, 50%, 16%);
-	--clr-neutral-VeryDarkBlue: hsl(215, 32%, 27%);
-	--clr-neutral-White: hsl(0, 0%, 100%);
+	--clr-bg-VeryDarkBlue: hsl(217, 54%, 11%);
+	--clr-card-VeryDarkBlue: hsl(216, 50%, 16%);
+	--clr-line-VeryDarkBlue: hsl(215, 32%, 27%);
+	--clr-White: hsl(0, 0%, 100%);
 
 	--fts-body: 1.125rem;
 	--ftw-300: 300;
@@ -45,4 +45,13 @@ ul {
 
 body {
 	font-family: 'Outfit', sans-serif;
+	font-size: var(--fts-body);
+	font-weight: var(--ftw-400);
+	min-height: calc(100vh - 1px);
+	display: -ms-grid;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clr-bg-VeryDarkBlue);
+    color: var(--clr-line-VeryDarkBlue);
 }
