@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* ~~~~~~~~~~~~~ Reset styles ~~~~~~~~~~~~ */
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h2,
+p {
+	margin: 1rem;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+/* img {
+	display: block;
+	width: 100%;
+} */
+
+/* ~~~~~~~~~~~~~ Variables styles ~~~~~~~~~~~~ */
+
+:root {
+	--clr-primary-Softblue: hsl(215, 51%, 70%);
+	--clr-primary-Cyan: hsl(178, 100%, 50%);
+
+	--clr-neutral-VeryDarkBlue: hsl(217, 54%, 11%);
+	--clr-neutral-VeryDarkBlue: hsl(216, 50%, 16%);
+	--clr-neutral-VeryDarkBlue: hsl(215, 32%, 27%);
+	--clr-neutral-White: hsl(0, 0%, 100%);
+
+	--fts-body: 1.125rem;
+	--ftw-300: 300;
+	--ftw-400: 400;
+	--ftw-600: 600;
+}
+
+/* ~~~~~~~~~~~~~ Utilities styles ~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~ General styles ~~~~~~~~~~~~ */
+
+body {
+	font-family: 'Outfit', sans-serif;
+}
