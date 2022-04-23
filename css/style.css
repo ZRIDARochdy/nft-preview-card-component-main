@@ -38,6 +38,7 @@ ul {
 	--ftw-300: 300;
 	--ftw-400: 400;
 	--ftw-600: 600;
+	--transition: all ease-in-out 400ms;
 }
 
 /* ~~~~~~~~~~~~~ Utilities styles ~~~~~~~~~~~~ */
@@ -69,7 +70,6 @@ span {
 a {
 	text-decoration: none;
 	color: inherit;
-	
 }
 
 /* ~~~~~~~~~~~~~ Card styles ~~~~~~~~~~~~ */
@@ -78,10 +78,39 @@ a {
 	padding: 1.25rem;
 	background-color: var(--clr-card-VeryDarkBlue);
 	border-radius: 1rem;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-.card > img {
+.card figure {
+	border-radius: 1.2rem;
+	overflow: hidden;
+	background-color: var(--clr-primary-Cyan);
+	position: relative;
+	transition: var(--transition);
+}
+.card figure::after {
+	content: '';
+	display: block;
+	top: 0;
 	width: 100%;
-	border-radius: 1rem;
+	height: 100%;
+	position: absolute;
+	background-image: url(../images/icon-view.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	transition: var(--transition);
+}
+.card figure:hover::after {
+	opacity: 1;
+}
+.card figure img {
+	display: block;
+	width: 100%;
+	transition: var(--transition);
+}
+.card figure:hover img {
+	opacity: 0.5;
+	cursor: pointer;
 }
 .card a:hover,
 .card a:focus {
@@ -104,6 +133,7 @@ a {
 	border: none;
 }
 .credit img {
+    display: block;
 	width: 15%;
 	height: 15%;
 	border: 2px solid var(--clr-White);
@@ -113,6 +143,12 @@ a {
 .credit p {
 	font-weight: var(--ftw-300);
 }
+.card a,
+.credit a {
+	transition: all ease-in-out 400ms;
+}
+.card a:hover,
+.card a:focus,
 .credit a:hover,
 .credit a:focus {
 	color: var(--clr-primary-Cyan);
